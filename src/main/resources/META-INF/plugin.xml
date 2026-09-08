@@ -1,0 +1,28 @@
+<idea-plugin>
+    <id>com.eliverlara.andromeda</id>
+    <name>Andromeda JetBrains</name>
+    <vendor url="https://github.com/AdamOusmer/Andromeda-JetBrains" email="contact@adam-ousmer.dev">Adam Ousmer</vendor>
+    <description><![CDATA[
+        <p>Dark theme with fluorescent syntax highlighting, ported 1:1 from the Andromeda theme for Visual Studio Code.</p>
+        <p>Built for the IntelliJ Islands layout. Variants: Andromeda, Andromeda Italic, Andromeda Bordered, Andromeda Italic Bordered.</p>
+    ]]></description>
+    <change-notes><![CDATA[
+        <ul><li>1.0.0 - Initial JetBrains port, matches Andromeda VS Code 1.10.0.</li></ul>
+    ]]></change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+    <!-- Optional: TextMate-scope parity annotators; the theme works without these plugins. -->
+    <depends optional="true" config-file="andromeda-javascript.xml">JavaScript</depends>
+    <depends optional="true" config-file="andromeda-java.xml">com.intellij.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <themeProvider id="com.eliverlara.andromeda" path="/themes/Andromeda.theme.json" targetUi="islands"/>
+        <themeProvider id="com.eliverlara.andromeda.italic" path="/themes/AndromedaItalic.theme.json" targetUi="islands"/>
+        <themeProvider id="com.eliverlara.andromeda.bordered" path="/themes/AndromedaBordered.theme.json" targetUi="islands"/>
+        <themeProvider id="com.eliverlara.andromeda.italic.bordered" path="/themes/AndromedaItalicBordered.theme.json" targetUi="islands"/>
+        <bundledColorScheme id="Andromeda" path="/themes/Andromeda.xml"/>
+        <bundledColorScheme id="Andromeda Italic" path="/themes/AndromedaItalic.xml"/>
+        <bundledColorScheme id="Andromeda Bordered" path="/themes/AndromedaBordered.xml"/>
+        <bundledColorScheme id="Andromeda Italic Bordered" path="/themes/AndromedaItalicBordered.xml"/>
+    </extensions>
+</idea-plugin>
