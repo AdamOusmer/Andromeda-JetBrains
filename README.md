@@ -1,27 +1,28 @@
-<!-- Copyright (c) 2026 Adam Ousmer. MIT License. See LICENSE.md. -->
-[forks-shield]: https://img.shields.io/github/forks/AdamOusmer/andromeda-intellij.svg?style=for-the-badge
+<!-- Copyright (c) 2026 Adam Ousmer. MIT License. See LICENSE.md.
+     Forked from EliverLara/Andromeda (VS Code theme, kept in themes/); the JetBrains port lives at the repo root. -->
+[forks-shield]: https://img.shields.io/github/forks/AdamOusmer/Andromeda-JetBrains.svg?style=for-the-badge
 
-[forks-url]: https://github.com/AdamOusmer/andromeda-intellij/network/members
+[forks-url]: https://github.com/AdamOusmer/Andromeda-JetBrains/network/members
 
-[stars-shield]: https://img.shields.io/github/stars/AdamOusmer/andromeda-intellij.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/AdamOusmer/Andromeda-JetBrains.svg?style=for-the-badge
 
-[stars-url]: https://github.com/AdamOusmer/andromeda-intellij/stargazers
+[stars-url]: https://github.com/AdamOusmer/Andromeda-JetBrains/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/AdamOusmer/andromeda-intellij.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/AdamOusmer/Andromeda-JetBrains.svg?style=for-the-badge
 
-[issues-url]: https://github.com/AdamOusmer/andromeda-intellij/issues
+[issues-url]: https://github.com/AdamOusmer/Andromeda-JetBrains/issues
 
 [license-shield]: https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge
 
 [license-url]: LICENSE.md
 
-[release-shield]: https://img.shields.io/github/v/release/AdamOusmer/andromeda-intellij?style=for-the-badge
+[release-shield]: https://img.shields.io/github/v/release/AdamOusmer/Andromeda-JetBrains?style=for-the-badge
 
-[release-url]: https://github.com/AdamOusmer/andromeda-intellij/releases/latest
+[release-url]: https://github.com/AdamOusmer/Andromeda-JetBrains/releases/latest
 
-[build-shield]: https://img.shields.io/github/actions/workflow/status/AdamOusmer/andromeda-intellij/build.yml?style=for-the-badge
+[build-shield]: https://img.shields.io/github/actions/workflow/status/AdamOusmer/Andromeda-JetBrains/build.yml?style=for-the-badge
 
-[build-url]: https://github.com/AdamOusmer/andromeda-intellij/actions/workflows/build.yml
+[build-url]: https://github.com/AdamOusmer/Andromeda-JetBrains/actions/workflows/build.yml
 
 
 <!-- PROJECT LOGO -->
@@ -35,11 +36,11 @@
 [![Build][build-shield]][build-url]
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Q8P121QNHK)
 
-  <a href="https://github.com/AdamOusmer/andromeda-intellij">
+  <a href="https://github.com/AdamOusmer/Andromeda-JetBrains">
     <img src=".github/assets/logo.png" alt="Logo" width="128" height="128">
   </a>
 
-<h3 align="center">Andromeda for IntelliJ</h3>
+<h3 align="center">Andromeda JetBrains</h3>
 
   <p align="center">
     The Andromeda VS Code theme, ported 1:1 to JetBrains IDEs.
@@ -47,11 +48,11 @@
     Built for the new Islands layout. Same hex codes, same fluorescent feel.
     <br />
     <br />
-    <a href="https://github.com/AdamOusmer/andromeda-intellij/releases/latest"><strong>Download the latest release »</strong></a>
+    <a href="https://github.com/AdamOusmer/Andromeda-JetBrains/releases/latest"><strong>Download the latest release »</strong></a>
     <br />
-    <a href="https://github.com/AdamOusmer/andromeda-intellij/issues/new?labels=bug">Report Bug</a>
+    <a href="https://github.com/AdamOusmer/Andromeda-JetBrains/issues/new?labels=bug">Report Bug</a>
     &middot;
-    <a href="https://github.com/AdamOusmer/andromeda-intellij/issues/new?labels=enhancement">Request Feature</a>
+    <a href="https://github.com/AdamOusmer/Andromeda-JetBrains/issues/new?labels=enhancement">Request Feature</a>
     <br />
     <br />
     </p>
@@ -112,7 +113,7 @@ Requires IntelliJ-based IDEs 2025.2 or newer with the new UI.
 
 ## Installation
 
-1. Download `andromeda-intellij-<version>.zip` from the [latest release](https://github.com/AdamOusmer/andromeda-intellij/releases/latest).
+1. Download `andromeda-jetbrains-<version>.zip` from the [latest release](https://github.com/AdamOusmer/Andromeda-JetBrains/releases/latest).
 2. *Settings → Plugins → ⚙ → Install Plugin from Disk…* → pick the zip → restart the IDE.
 3. *Settings → Appearance & Behavior → Appearance → Theme* → pick a variant. The editor colour scheme switches with it.
 

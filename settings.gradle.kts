@@ -1,4 +1,4 @@
-rootProject.name = "andromeda-intellij"
+rootProject.name = "andromeda-jetbrains"
 
 pluginManagement {
     repositories {

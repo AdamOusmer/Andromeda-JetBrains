@@ -1,13 +1,13 @@
 <idea-plugin>
     <id>com.eliverlara.andromeda</id>
-    <name>Andromeda Theme</name>
-    <vendor url="https://github.com/EliverLara/Andromeda">EliverLara</vendor>
+    <name>Andromeda JetBrains</name>
+    <vendor url="https://github.com/AdamOusmer/Andromeda-JetBrains" email="contact@adam-ousmer.dev">Adam Ousmer</vendor>
     <description><![CDATA[
         <p>Dark theme with fluorescent syntax highlighting, ported 1:1 from the Andromeda theme for Visual Studio Code.</p>
         <p>Built for the IntelliJ Islands layout. Variants: Andromeda, Andromeda Italic, Andromeda Bordered, Andromeda Italic Bordered.</p>
     ]]></description>
     <change-notes><![CDATA[
-        <ul><li>1.10.0 - Initial IntelliJ port, matches Andromeda VS Code 1.10.0.</li></ul>
+        <ul><li>1.0.0 - Initial JetBrains port, matches Andromeda VS Code 1.10.0.</li></ul>
     ]]></change-notes>
 
     <depends>com.intellij.modules.platform</depends>

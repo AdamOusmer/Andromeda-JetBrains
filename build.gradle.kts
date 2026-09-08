@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.eliverlara.andromeda"
-version = "1.10.0"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
@@ -30,7 +30,7 @@ tasks.withType<JavaCompile>().configureEach {
 intellijPlatform {
     buildSearchableOptions = false
     pluginConfiguration {
-        name = "Andromeda Theme"
+        name = "Andromeda JetBrains"
         ideaVersion {
             sinceBuild = "252"
             untilBuild = provider { null }
