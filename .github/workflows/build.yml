@@ -23,7 +23,7 @@ jobs:
 
       # IntelliJ 2026.2 class files need a JDK 25 javac to read; bytecode still targets 21 (options.release).
       - name: Set up JDK 25
-        uses: actions/setup-java@v5
+        uses: actions/setup-java@v6
         with:
           distribution: temurin
           java-version: '25'
