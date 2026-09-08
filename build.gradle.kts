@@ -17,8 +17,14 @@ dependencies {
     intellijPlatform {
         // Set -PlocalIdePath=/path/to/IntelliJ IDEA.app to build against an installed IDE instead of downloading.
         val localIde = providers.gradleProperty("localIdePath").orNull
-        if (localIde != null) local(localIde) else intellijIdeaCommunity("2025.2")
+        if (localIde != null) local(localIde) else intellijIdeaUltimate("2025.2")
+        bundledPlugins("JavaScript", "com.intellij.java")
     }
+}
+
+tasks.withType<JavaCompile>().configureEach {
+    options.release = 21
+    options.encoding = "UTF-8"
 }
 
 intellijPlatform {

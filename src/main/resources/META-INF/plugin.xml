@@ -11,6 +11,9 @@
     ]]></change-notes>
 
     <depends>com.intellij.modules.platform</depends>
+    <!-- Optional: TextMate-scope parity annotators; the theme works without these plugins. -->
+    <depends optional="true" config-file="andromeda-javascript.xml">JavaScript</depends>
+    <depends optional="true" config-file="andromeda-java.xml">com.intellij.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <themeProvider id="com.eliverlara.andromeda" path="/themes/Andromeda.theme.json" targetUi="islands"/>

@@ -4,7 +4,10 @@
     <property name="ideVersion">2025.2.0.0</property>
     <property name="originalScheme">Andromeda</property>
   </metaInfo>
-  <option name="LINE_SPACING" value="1.2" />
+  <option name="LINE_SPACING" value="1.5" />
+  <option name="EDITOR_FONT_SIZE" value="15" />
+  <option name="EDITOR_FONT_NAME" value="Menlo" />
+  <option name="EDITOR_LIGATURES" value="false" />
   <colors>
     <option name="ADDED_LINES_COLOR" value="7B9B39" />
     <option name="ANNOTATIONS_COLOR" value="746F77" />
@@ -95,6 +98,76 @@
         <option name="FOREGROUND" value="FFE66D" />
       </value>
     </option>
+    <option name="ANDROMEDA_FUNCTION_CALL">
+      <value>
+        <option name="FOREGROUND" value="FFE66D" />
+      </value>
+    </option>
+    <option name="ANDROMEDA_LANGUAGE_CONSTANT">
+      <value>
+        <option name="FOREGROUND" value="EE5D43" />
+      </value>
+    </option>
+    <option name="ANDROMEDA_OBJECT">
+      <value>
+        <option name="FOREGROUND" value="F39C12" />
+      </value>
+    </option>
+    <option name="ANDROMEDA_THIS">
+      <value>
+        <option name="FOREGROUND" value="FF00AA" />
+      </value>
+    </option>
+    <option name="ANGLE_BRACKETS_RAINBOW_COLOR0">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="ANGLE_BRACKETS_RAINBOW_COLOR1">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="ANGLE_BRACKETS_RAINBOW_COLOR2">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="ANGLE_BRACKETS_RAINBOW_COLOR3">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="ANGLE_BRACKETS_RAINBOW_COLOR4">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="ANGLE_BRACKETS_RAINBOW_COLOR5">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="ANGLE_BRACKETS_RAINBOW_COLOR6">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="ANGLE_BRACKETS_RAINBOW_COLOR7">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="ANGLE_BRACKETS_RAINBOW_COLOR8">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="ANGLE_BRACKETS_RAINBOW_COLOR9">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
     <option name="ANNOTATION_ATTRIBUTE_NAME_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="FFE66D" />
@@ -117,12 +190,12 @@
     </option>
     <option name="BASH.BRACES">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="BASH.BRACKETS">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="BASH.CONDITIONAL">
@@ -189,7 +262,7 @@
     </option>
     <option name="BASH.PARENTHESES">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="BASH.RAW_STRING">
@@ -619,12 +692,12 @@
     </option>
     <option name="CSS.BRACES">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="CSS.BRACKETS">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="CSS.CLASS_NAME">
@@ -706,7 +779,7 @@
     </option>
     <option name="CSS.PARENTHESES">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="CSS.PROPERTY_NAME">
@@ -828,12 +901,12 @@
     </option>
     <option name="DEFAULT_BRACES">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="DEFAULT_BRACKETS">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="DEFAULT_CLASS_NAME">
@@ -995,7 +1068,7 @@
     </option>
     <option name="DEFAULT_PARENTHS">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="DEFAULT_PREDEFINED_SYMBOL">
@@ -1498,12 +1571,12 @@
     </option>
     <option name="JAVA_BRACES">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="JAVA_BRACKETS">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="JAVA_COMMA">
@@ -1565,7 +1638,7 @@
     </option>
     <option name="JAVA_PARENTH">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="JAVA_SEMICOLON">
@@ -1598,12 +1671,12 @@
     </option>
     <option name="JS.BRACES">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="JS.BRACKETS">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="JS.CLASS">
@@ -1697,7 +1770,7 @@
     </option>
     <option name="JS.INSTANCE_MEMBER_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="F39C12" />
+        <option name="FOREGROUND" value="D5CED9" />
       </value>
     </option>
     <option name="JS.INTERFACE">
@@ -1766,7 +1839,7 @@
     </option>
     <option name="JS.PARENTHS">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="JS.PRIMITIVE.TYPE">
@@ -1791,7 +1864,7 @@
     </option>
     <option name="JS.STATIC_MEMBER_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="F39C12" />
+        <option name="FOREGROUND" value="D5CED9" />
       </value>
     </option>
     <option name="JS.STRING">
@@ -1827,12 +1900,12 @@
     </option>
     <option name="JSON.BRACES">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="JSON.BRACKETS">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="JSON.COLON">
@@ -1924,12 +1997,12 @@
     </option>
     <option name="KOTLIN_BRACES">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="KOTLIN_BRACKETS">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="KOTLIN_BUILTIN_ANNOTATION">
@@ -2160,7 +2233,7 @@
     </option>
     <option name="KOTLIN_PARENTHESIS">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="KOTLIN_PROPERTY_WITH_BACKING_FIELD">
@@ -2839,12 +2912,12 @@
     </option>
     <option name="PY.BRACES">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="PY.BRACKETS">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="PY.BUILTIN_NAME">
@@ -2965,7 +3038,7 @@
     </option>
     <option name="PY.PARENTHS">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="PY.PREDEFINED_DEFINITION">
@@ -3123,6 +3196,56 @@
     <option name="REGEXP.REDUNDANT_ESCAPE">
       <value>
         <option name="FOREGROUND" value="7CB7FF" />
+      </value>
+    </option>
+    <option name="ROUND_BRACKETS_RAINBOW_COLOR0">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="ROUND_BRACKETS_RAINBOW_COLOR1">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="ROUND_BRACKETS_RAINBOW_COLOR2">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="ROUND_BRACKETS_RAINBOW_COLOR3">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="ROUND_BRACKETS_RAINBOW_COLOR4">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="ROUND_BRACKETS_RAINBOW_COLOR5">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="ROUND_BRACKETS_RAINBOW_COLOR6">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="ROUND_BRACKETS_RAINBOW_COLOR7">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="ROUND_BRACKETS_RAINBOW_COLOR8">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="ROUND_BRACKETS_RAINBOW_COLOR9">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="RUBY_BACK_REF">
@@ -3524,6 +3647,106 @@
         <option name="FOREGROUND" value="C74DED" />
       </value>
     </option>
+    <option name="SQUARE_BRACKETS_RAINBOW_COLOR0">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="SQUARE_BRACKETS_RAINBOW_COLOR1">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="SQUARE_BRACKETS_RAINBOW_COLOR2">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="SQUARE_BRACKETS_RAINBOW_COLOR3">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="SQUARE_BRACKETS_RAINBOW_COLOR4">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="SQUARE_BRACKETS_RAINBOW_COLOR5">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="SQUARE_BRACKETS_RAINBOW_COLOR6">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="SQUARE_BRACKETS_RAINBOW_COLOR7">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="SQUARE_BRACKETS_RAINBOW_COLOR8">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="SQUARE_BRACKETS_RAINBOW_COLOR9">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="SQUIGGLY_BRACKETS_RAINBOW_COLOR0">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="SQUIGGLY_BRACKETS_RAINBOW_COLOR1">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="SQUIGGLY_BRACKETS_RAINBOW_COLOR2">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="SQUIGGLY_BRACKETS_RAINBOW_COLOR3">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="SQUIGGLY_BRACKETS_RAINBOW_COLOR4">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="SQUIGGLY_BRACKETS_RAINBOW_COLOR5">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="SQUIGGLY_BRACKETS_RAINBOW_COLOR6">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="SQUIGGLY_BRACKETS_RAINBOW_COLOR7">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="SQUIGGLY_BRACKETS_RAINBOW_COLOR8">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
+    <option name="SQUIGGLY_BRACKETS_RAINBOW_COLOR9">
+      <value>
+        <option name="FOREGROUND" value="BFC3CC" />
+      </value>
+    </option>
     <option name="STATIC_FIELD_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="F39C12" />
@@ -3752,12 +3975,12 @@
     </option>
     <option name="TS.BRACES">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="TS.BRACKETS">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="TS.CLASS">
@@ -3841,7 +4064,7 @@
     </option>
     <option name="TS.INSTANCE_MEMBER_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="F39C12" />
+        <option name="FOREGROUND" value="D5CED9" />
       </value>
     </option>
     <option name="TS.INTERFACE">
@@ -3900,7 +4123,7 @@
     </option>
     <option name="TS.PARENTHS">
       <value>
-        <option name="FOREGROUND" value="D5CED9" />
+        <option name="FOREGROUND" value="BFC3CC" />
       </value>
     </option>
     <option name="TS.PRIMITIVE.TYPES">
@@ -3925,7 +4148,7 @@
     </option>
     <option name="TS.STATIC_MEMBER_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="F39C12" />
+        <option name="FOREGROUND" value="D5CED9" />
       </value>
     </option>
     <option name="TS.STRING">

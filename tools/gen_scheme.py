@@ -13,6 +13,7 @@ BG = "23262E"; BG_BORDERED = "262A33"
 FG = "D5CED9"
 CYAN = "00E8C6"; ORANGE = "F39C12"; YELLOW = "FFE66D"; PINK = "FF00AA"; HOTPINK = "F92672"
 PURPLE = "C74DED"; BLUE = "7CB7FF"; RED = "EE5D43"; GREEN = "96E072"
+SILVER = "BFC3CC"  # brackets: silver, cooler than the text colour
 DIM = "746F77"; ERROR = "FC644D"; WARNING = "FF9F2E"; INFO = "3B79C7"; MUTED = "999999"
 
 
@@ -121,7 +122,7 @@ def build(name, bordered, italic):
         "DEFAULT_DOC_COMMENT_TAG": attr(COMMENT, ft=I | 1),
         "DEFAULT_DOC_COMMENT_TAG_VALUE": attr(CYAN, ft=I),
         "DEFAULT_COMMA": attr(FG), "DEFAULT_SEMICOLON": attr(FG), "DEFAULT_DOT": attr(FG),
-        "DEFAULT_BRACES": attr(FG), "DEFAULT_BRACKETS": attr(FG), "DEFAULT_PARENTHS": attr(FG),
+        "DEFAULT_BRACES": attr(SILVER), "DEFAULT_BRACKETS": attr(SILVER), "DEFAULT_PARENTHS": attr(SILVER),
         "DEFAULT_OPERATION_SIGN": attr(RED),           # keyword.operator -> Red
         "DEFAULT_KEYWORD": attr(PURPLE, ft=I),         # keyword / storage -> Purple
         "DEFAULT_STRING": attr(GREEN),                 # string -> Green
@@ -208,6 +209,13 @@ def build(name, bordered, italic):
         "CUSTOM_KEYWORD3_ATTRIBUTES": attr(HOTPINK), "CUSTOM_KEYWORD4_ATTRIBUTES": attr(BLUE),
         "IMPLICIT_ANONYMOUS_CLASS_PARAMETER_ATTRIBUTES": attr(CYAN),
         "TABS": attr(bg_="333844"),
+        # keys used by this plugin's own annotators (TextMate-scope parity that IntelliJ's highlighter lacks)
+        "ANDROMEDA_OBJECT": attr(ORANGE),                                                          # variable.other.object(.property).js
+        "ANDROMEDA_FUNCTION_CALL": attr(YELLOW),                                                   # entity.name.function / support.function
+        "ANDROMEDA_LANGUAGE_CONSTANT": attr(RED),                                                  # constant.language (true/false/null/undefined)
+        "ANDROMEDA_THIS": attr(PINK),                                                              # variable.language.this
+        # Rainbow Brackets plugin (if installed): keep brackets silver, no rainbow
+        **{f"{kind}_BRACKETS_RAINBOW_COLOR{i}": attr(SILVER) for kind in ("ROUND", "SQUARE", "SQUIGGLY", "ANGLE") for i in range(10)},
         "RAINBOW_COLOR0": attr(CYAN), "RAINBOW_COLOR1": attr(ORANGE), "RAINBOW_COLOR2": attr(YELLOW),
         "RAINBOW_COLOR3": attr(PINK), "RAINBOW_COLOR4": attr(BLUE),
         # ---- diff / vcs (diffEditor.*, merge.*) -------------------------------------------
@@ -277,7 +285,7 @@ def build(name, bordered, italic):
         "JAVA_OPERATION_SIGN": attr(RED), "JAVA_LINE_COMMENT": attr(COMMENT, ft=I), "JAVA_BLOCK_COMMENT": attr(COMMENT, ft=I),
         "JAVA_DOC_COMMENT": attr(COMMENT, ft=I), "JAVA_DOC_TAG": attr(COMMENT, ft=I | 1), "JAVA_DOC_MARKUP": attr(COMMENT, ft=I),
         "JAVA_VALID_STRING_ESCAPE": attr(GREEN), "JAVA_INVALID_STRING_ESCAPE": attr(ERROR, effect=ERROR, effect_type=UNDERWAVE),
-        "JAVA_BRACES": attr(FG), "JAVA_BRACKETS": attr(FG), "JAVA_PARENTH": attr(FG), "JAVA_COMMA": attr(FG),
+        "JAVA_BRACES": attr(SILVER), "JAVA_BRACKETS": attr(SILVER), "JAVA_PARENTH": attr(SILVER), "JAVA_COMMA": attr(FG),
         "JAVA_SEMICOLON": attr(FG), "JAVA_DOT": attr(FG),
         "KOTLIN_NAMED_ARGUMENT": attr(CYAN), "KOTLIN_LABEL": attr(FG), "KOTLIN_SMART_CAST_VALUE": attr(bg_="2E323D"),
         "KOTLIN_MUTABLE_VARIABLE": attr(CYAN, effect=DIM, effect_type=UNDERLINE), "KOTLIN_WRAPPED_INTO_REF": attr(CYAN, effect=DIM, effect_type=UNDERLINE),
@@ -306,13 +314,13 @@ def build(name, bordered, italic):
         "KOTLIN_ANNOTATION_ATTRIBUTE_NAME_ATTRIBUTES": attr(YELLOW), "KOTLIN_CONTEXT_ARGUMENT": attr(CYAN),
         "KOTLIN_SYNTHETIC_EXTENSION_PROPERTY": attr(ORANGE), "KOTLIN_VARIABLE_AS_FUNCTION": attr(YELLOW), "KOTLIN_VARIABLE_AS_FUNCTION_LIKE": attr(YELLOW),
         "KOTLIN_CLOSURE_DEFAULT_PARAMETER": attr(CYAN), "KOTLIN_SMART_CAST_RECEIVER": attr(bg_="2E323D"),
-        "KOTLIN_BRACES": attr(FG), "KOTLIN_BRACKETS": attr(FG), "KOTLIN_PARENTHESIS": attr(FG), "KOTLIN_COMMA": attr(FG),
+        "KOTLIN_BRACES": attr(SILVER), "KOTLIN_BRACKETS": attr(SILVER), "KOTLIN_PARENTHESIS": attr(SILVER), "KOTLIN_COMMA": attr(FG),
         "KOTLIN_SEMICOLON": attr(FG), "KOTLIN_DOT": attr(FG), "KOTLIN_COLON": attr(FG),
         # JavaScript / TypeScript
         "JS.GLOBAL_VARIABLE": attr(CYAN), "JS.LOCAL_VARIABLE": attr(CYAN), "JS.PARAMETER": attr(CYAN),
         "JS.GLOBAL_FUNCTION": attr(YELLOW), "JS.LOCAL_FUNCTION": attr(YELLOW),
         "JS.INSTANCE_MEMBER_FUNCTION": attr(YELLOW), "JS.STATIC_MEMBER_FUNCTION": attr(YELLOW),
-        "JS.INSTANCE_MEMBER_VARIABLE": attr(ORANGE), "JS.STATIC_MEMBER_VARIABLE": attr(ORANGE),
+        "JS.INSTANCE_MEMBER_VARIABLE": attr(FG), "JS.STATIC_MEMBER_VARIABLE": attr(FG),          # variable.other.property -> default
         "JS.CLASS": attr(YELLOW), "JS.INTERFACE": attr(YELLOW), "JS.TYPE_ALIAS": attr(YELLOW),
         "JS.PRIMITIVE.TYPE": attr(PURPLE),                                                         # support.type -> Purple
         "JS.DECORATOR": attr(YELLOW), "JS.REGEXP": attr(BLUE),                                     # string.regexp -> Blue
@@ -326,14 +334,14 @@ def build(name, bordered, italic):
         "JS.DOC_TYPE": attr(YELLOW, ft=I), "JS.DOC_TAG_NAMEPATH": attr(CYAN, ft=I), "JS.EXCEPTION": attr(YELLOW),
         "JS.JSX_CLIENT_COMPONENT": attr(YELLOW), "JS.VALUE_HINT": attr(DIM),
         "JavaScript:INJECTED_LANGUAGE_FRAGMENT": attr(bg_=bg),
-        "JS.BRACES": attr(FG), "JS.BRACKETS": attr(FG), "JS.PARENTHS": attr(FG), "JS.COMMA": attr(FG),
+        "JS.BRACES": attr(SILVER), "JS.BRACKETS": attr(SILVER), "JS.PARENTHS": attr(SILVER), "JS.COMMA": attr(FG),
         "JS.SEMICOLON": attr(FG), "JS.DOT": attr(FG), "JS.BADCHARACTER": attr(ERROR, effect=ERROR, effect_type=UNDERWAVE),
         "JS.VALID_STRING_ESCAPE": attr(GREEN), "JS.INVALID_STRING_ESCAPE": attr(ERROR, effect=ERROR, effect_type=UNDERWAVE),
         # TypeScript mirrors JS
         "TS.GLOBAL_VARIABLE": attr(CYAN), "TS.LOCAL_VARIABLE": attr(CYAN), "TS.PARAMETER": attr(CYAN),
         "TS.GLOBAL_FUNCTION": attr(YELLOW), "TS.LOCAL_FUNCTION": attr(YELLOW),
         "TS.INSTANCE_MEMBER_FUNCTION": attr(YELLOW), "TS.STATIC_MEMBER_FUNCTION": attr(YELLOW),
-        "TS.INSTANCE_MEMBER_VARIABLE": attr(ORANGE), "TS.STATIC_MEMBER_VARIABLE": attr(ORANGE),
+        "TS.INSTANCE_MEMBER_VARIABLE": attr(FG), "TS.STATIC_MEMBER_VARIABLE": attr(FG),
         "TS.CLASS": attr(YELLOW), "TS.INTERFACE": attr(YELLOW), "TS.TYPE.ALIAS": attr(YELLOW), "TS.TYPE_PARAMETER": attr(YELLOW),
         "TS.PRIMITIVE.TYPES": attr(PURPLE), "TS.TYPE_GUARD": attr(PURPLE), "TS.DECORATOR": attr(YELLOW), "TS.REGEXP": attr(BLUE),
         "TS.KEYWORD": attr(PURPLE, ft=I), "TS.NUMBER": attr(ORANGE), "TS.STRING": attr(GREEN), "TS.OPERATION_SIGN": attr(RED),
@@ -341,7 +349,7 @@ def build(name, bordered, italic):
         "TS.DOC_TAG": attr(COMMENT, ft=I | 1), "TS.DOC_TYPE": attr(YELLOW, ft=I), "TS.DOC_TAG_NAMEPATH": attr(CYAN, ft=I),
         "TS.LABEL": attr(FG), "TS.FUNCTION_ARROW": attr(PURPLE),
         "TS.EXPORTED.VARIABLE": attr(CYAN), "TS.EXPORTED.FUNCTION": attr(YELLOW), "TS.EXPORTED.CLASS": attr(YELLOW),
-        "TS.BRACES": attr(FG), "TS.BRACKETS": attr(FG), "TS.PARENTHS": attr(FG), "TS.COMMA": attr(FG), "TS.SEMICOLON": attr(FG), "TS.DOT": attr(FG),
+        "TS.BRACES": attr(SILVER), "TS.BRACKETS": attr(SILVER), "TS.PARENTHS": attr(SILVER), "TS.COMMA": attr(FG), "TS.SEMICOLON": attr(FG), "TS.DOT": attr(FG),
         "TS.VALID_STRING_ESCAPE": attr(GREEN), "TS.INVALID_STRING_ESCAPE": attr(ERROR, effect=ERROR, effect_type=UNDERWAVE),
         "TS.BADCHARACTER": attr(ERROR, effect=ERROR, effect_type=UNDERWAVE),
         # Python
@@ -358,7 +366,7 @@ def build(name, bordered, italic):
         "PY.ANNOTATION.CLASS_NAME": attr(YELLOW), "PY.CLASS_REFERENCE": attr(YELLOW),
         "PY.FSTRING_FRAGMENT_BRACES": attr(HOTPINK), "PY.FSTRING.TEXT": attr(GREEN),
         "PY.VALID_STRING_ESCAPE": attr(GREEN), "PY.INVALID_STRING_ESCAPE": attr(ERROR, effect=ERROR, effect_type=UNDERWAVE),
-        "PY.BRACES": attr(FG), "PY.BRACKETS": attr(FG), "PY.PARENTHS": attr(FG), "PY.COMMA": attr(FG), "PY.DOT": attr(FG),
+        "PY.BRACES": attr(SILVER), "PY.BRACKETS": attr(SILVER), "PY.PARENTHS": attr(SILVER), "PY.COMMA": attr(FG), "PY.DOT": attr(FG),
         # Go
         "GO_KEYWORD": attr(PURPLE, ft=I), "GO_BUILTIN_TYPE_REFERENCE": attr(PURPLE), "GO_BUILTIN_FUNCTION_CALL": attr(YELLOW),
         "GO_BUILTIN_CONSTANT": attr(RED), "GO_BUILTIN_VARIABLE": attr(CYAN), "GO_PACKAGE": attr(CYAN),
@@ -387,8 +395,8 @@ def build(name, bordered, italic):
         "CSS.FUNCTION": attr(RED),                                                                 # source.css support.function -> Red
         "CSS.COLOR": attr(RED),                                                                    # constant.other.color -> Red
         "CSS.STRING": attr(GREEN), "CSS.URL": attr(GREEN), "CSS.COMMENT": attr(COMMENT, ft=I),
-        "CSS.IDENT": attr(FG), "CSS.OPERATORS": attr(RED), "CSS.BRACES": attr(FG), "CSS.BRACKETS": attr(FG),
-        "CSS.PARENTHESES": attr(FG), "CSS.COMMA": attr(FG), "CSS.DOT": attr(FG), "CSS.SEMICOLON": attr(FG), "CSS.COLON": attr(FG),
+        "CSS.IDENT": attr(FG), "CSS.OPERATORS": attr(RED), "CSS.BRACES": attr(SILVER), "CSS.BRACKETS": attr(SILVER),
+        "CSS.PARENTHESES": attr(SILVER), "CSS.COMMA": attr(FG), "CSS.DOT": attr(FG), "CSS.SEMICOLON": attr(FG), "CSS.COLON": attr(FG),
         "CSS.AT_RULE": attr(PURPLE), "CSS.CUSTOM_PROPERTY": attr(CYAN), "CSS.CUSTOM_PROPERTY_REFERENCE": attr(CYAN),
         "CSS.UNICODE.RANGE": attr(ORANGE), "CSS.BAD_CHARACTER": attr(ERROR, effect=ERROR, effect_type=UNDERWAVE),
         "SASS_VARIABLE": attr(CYAN), "SASS_MIXIN": attr(YELLOW), "SASS_FUNCTION": attr(YELLOW), "SASS_KEYWORD": attr(PURPLE),
@@ -431,7 +439,7 @@ def build(name, bordered, italic):
         "JSON.PROPERTY_KEY": attr(CYAN),                                                           # support.type.property-name.json -> Cyan
         "JSON.STRING": attr(GREEN), "JSON.NUMBER": attr(ORANGE), "JSON.KEYWORD": attr(RED),        # constant.language -> Red
         "JSON.LINE_COMMENT": attr(COMMENT, ft=I), "JSON.BLOCK_COMMENT": attr(COMMENT, ft=I),
-        "JSON.BRACES": attr(FG), "JSON.BRACKETS": attr(FG), "JSON.COMMA": attr(FG), "JSON.COLON": attr(FG),
+        "JSON.BRACES": attr(SILVER), "JSON.BRACKETS": attr(SILVER), "JSON.COMMA": attr(FG), "JSON.COLON": attr(FG),
         "JSON.PARAMETER": attr(PINK),
         "TOML_KEY": attr(CYAN), "TOML_STRING": attr(GREEN), "TOML_NUMBER": attr(ORANGE), "TOML_BOOLEAN": attr(RED),
         "TOML_DATE": attr(ORANGE), "TOML_COMMENT": attr(COMMENT, ft=I),
@@ -444,8 +452,8 @@ def build(name, bordered, italic):
         "BASH.VAR_USE": attr(CYAN), "BASH.VAR_DEF": attr(CYAN), "BASH.VAR_USE_BUILTIN": attr(CYAN),
         "BASH.FUNCTION_DEF_NAME": attr(YELLOW), "BASH.EXTERNAL_COMMAND": attr(YELLOW), "BASH.SUBSHELL_COMMAND": attr(YELLOW),
         "BASH.CONDITIONAL": attr(FG), "BASH.REDIRECTION": attr(RED), "BASH.HERE_DOC_START": attr(PURPLE), "BASH.HERE_DOC_END": attr(PURPLE),
-        "BASH.GENERIC_COMMAND": attr(YELLOW), "BASH.FUNCTION_CALL": attr(YELLOW), "BASH.BRACES": attr(FG), "BASH.BRACKETS": attr(FG),
-        "BASH.PARENTHESES": attr(FG), "BASH.BACKQUOTE": attr(HOTPINK), "BASH.STRING2": attr(GREEN), "BASH.INTERNAL_COMMAND": attr(YELLOW),
+        "BASH.GENERIC_COMMAND": attr(YELLOW), "BASH.FUNCTION_CALL": attr(YELLOW), "BASH.BRACES": attr(SILVER), "BASH.BRACKETS": attr(SILVER),
+        "BASH.PARENTHESES": attr(SILVER), "BASH.BACKQUOTE": attr(HOTPINK), "BASH.STRING2": attr(GREEN), "BASH.INTERNAL_COMMAND": attr(YELLOW),
         "DOCKERFILE_KEYWORD": attr(PURPLE, ft=I), "DOCKERFILE_STRING": attr(GREEN), "DOCKERFILE_COMMENT": attr(COMMENT, ft=I),
         "REGEXP.META": attr(BLUE), "REGEXP.CHARACTER": attr(BLUE), "REGEXP.QUANTIFIER": attr(BLUE), "REGEXP.BRACKETS": attr(BLUE),
         "REGEXP.BRACES": attr(BLUE), "REGEXP.PARENTHS": attr(BLUE), "REGEXP.ESC_CHARACTER": attr(BLUE), "REGEXP.CHAR_CLASS": attr(BLUE),
@@ -496,7 +504,10 @@ def build(name, bordered, italic):
              '    <property name="ideVersion">2025.2.0.0</property>',
              '    <property name="originalScheme">' + escape(name) + '</property>',
              '  </metaInfo>',
-             '  <option name="LINE_SPACING" value="1.2" />',
+             '  <option name="LINE_SPACING" value="1.5" />',                 # VS Code macOS golden line-height ratio
+             '  <option name="EDITOR_FONT_SIZE" value="15" />',              # VS Code default editor.fontSize
+             '  <option name="EDITOR_FONT_NAME" value="Menlo" />',           # VS Code default editor.fontFamily on macOS
+             '  <option name="EDITOR_LIGATURES" value="false" />',
              '  <colors>']
     for k in sorted(colors):
         lines.append(f'    <option name="{k}" value="{colors[k]}" />')

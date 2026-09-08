@@ -68,9 +68,20 @@ Requires the new UI with Islands layout (IntelliJ 2025.2+). The theme sets `"Isl
 Semi-transparent VS Code colours are kept as `#RRGGBBAA` in the UI theme and composited over the editor
 background in the editor scheme (IntelliJ editor schemes are opaque).
 
-Known differences caused by IntelliJ's semantic highlighter (not the palette): a `const` holding a function is
-coloured as a variable (cyan) when called, and `true`/`false`/`null` are keywords (purple) instead of constants (red).
-VS Code's rainbow bracket-pair colours are a VS Code feature, not part of Andromeda, and are not reproduced.
+## TextMate-scope parity annotators
+
+IntelliJ's JavaScript highlighter has no equivalent of several TextMate scopes Andromeda colours, so the plugin ships
+two small annotators (active only while an Andromeda scheme is selected):
+
+| VS Code scope | Example | Colour |
+|---|---|---|
+| `variable.other.object(.property)` | `execa` in `execa.stdout(...)`, `err.stderr` | Orange `#F39C12` |
+| `entity.name.function` / `support.function` | `homeDir(...)`, `new Listr(...)` | Yellow `#FFE66D` |
+| `constant.language` | `true` `false` `null` `undefined` (JS + Java) | Red `#EE5D43` |
+| `variable.language.this` | `this` (JS) | Pink `#FF00AA` |
+
+Brackets are silver `#BFC3CC` (also pinned for the Rainbow Brackets plugin if installed). Font: Menlo 15, line height 1.5
+(VS Code's macOS defaults, sized up).
 
 Regenerate theme files after editing the palette:
 

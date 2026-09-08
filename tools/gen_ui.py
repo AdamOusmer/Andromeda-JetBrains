@@ -43,7 +43,7 @@ A = dict(
 def colors_for(variant):
     bordered = "bordered" in variant
     editor_bg = A["bgEditorBordered"] if bordered else A["bg"]
-    frame = A["bgStrip"] if bordered else A["border"]
+    frame = A["bgStrip"]  # #20232B — one shade under #23262E, keeps VS Code's flat feel while islands stay visible
     c = {
         "white": A["white"], "black": "#000000", "transparent": editor_bg + "00",
         # --- Andromeda named palette (used by ui overrides below)
@@ -220,15 +220,21 @@ def ui_overrides(variant):
                 "trackColor": "#3A3F4C00", "hoverTrackColor": "#3A3F4C1A",
             },
         },
+        # VS Code tabs: flat, active = cyan text + 1px cyan bottom border (tab.activeBorder), no pill
+        # Islands paints the selected tab as a pill (fill + border); cyan border = tab.activeBorder
         "EditorTabs": {
-            "underlinedTabForeground": "#00E8C6", "underlinedTabBackground": "andromeda-editor-bg",
-            "underlinedBorderColor": "#00E8C6", "inactiveUnderlinedTabBorderColor": "#00E8C680",
-            "inactiveUnderlinedTabBackground": "andromeda-editor-bg",
-            "underlineColor": "#00E8C6", "inactiveUnderlineColor": "#00E8C680",
-            "hoverBackground": "#00E8C600", "hoverInactiveBackground": "#00E8C600",
+            "underlinedTabForeground": "#00E8C6", "underlinedTabInactiveForeground": "#00E8C680",
+            "underlinedTabBackground": "andromeda-editor-bg", "underlinedBorderColor": "#00E8C6",
+            "inactiveUnderlinedTabBackground": "andromeda-editor-bg", "inactiveUnderlinedTabBorderColor": "#00E8C680",
+            "regularBackground": "#00E8C600", "regularBorderColor": "#00E8C600",
+            "hoverBackground": "#00E8C600", "hoverInactiveBackground": "#00E8C600", "hoverBorderColor": "#00E8C600",
+            "underlineColor": "#00E8C6", "inactiveUnderlineColor": "#00E8C680", "underlineHeight": 1, "underlineArc": 0,
             "unselectedAlpha": 1.0, "unselectedBlend": 1.0,
         },
         "Label": {"foreground": "#D5CED9"},
+        # sideBar.foreground #999999 / sideBarTitle.foreground cyan
+        "Tree": {"foreground": "#999999", "selectionForeground": "#00E8C6", "selectionInactiveForeground": "#00E8C6"},
+
         "ToolWindow": {
             "Button": {
                 "foreground": "#BAAFC099", "selectedForeground": "#BAAFC0", "selectedBackground": "#282B35",
@@ -236,11 +242,11 @@ def ui_overrides(variant):
             },
             "DragAndDrop": {"areaBackground": "#495061D7"},
             "HeaderTab": {"underlineColor": "#00E8C6", "inactiveUnderlineColor": "#00E8C680",
-                          "selectedForeground": "#00E8C6", "selectedInactiveForeground": "#00E8C6"},
-            "Header": {"background": "andromeda-bg", "inactiveBackground": "andromeda-bg", "foreground": "#00E8C6"},
+                          "underlinedTabForeground": "#00E8C6", "underlinedTabInactiveForeground": "#00E8C6"},
+            "Header": {"background": "andromeda-bg", "inactiveBackground": "andromeda-bg"},
         },
         "StatusBar": {
-            "Widget": {"foreground": "#999999", "hoverForeground": "#EEEEEE",
+            "Widget": {"foreground": "#FFFFFF", "hoverForeground": "#FFFFFF",
                        "hoverBackground": "#07D4B5B0", "pressedBackground": "#00E8C5CC"},
             "Breadcrumbs": {"foreground": "#746F77", "hoverForeground": "#D5CED9",
                             "hoverBackground": "#07D4B5B0", "pressedBackground": "#00E8C5CC",

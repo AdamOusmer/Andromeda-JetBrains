@@ -10,7 +10,7 @@
     "transparent": "#23262E00",
     "andromeda-bg": "#23262E",
     "andromeda-editor-bg": "#23262E",
-    "andromeda-frame": "#1B1D23",
+    "andromeda-frame": "#20232B",
     "andromeda-border": "#1B1D23",
     "andromeda-cyan": "#00E8C6",
     "andromeda-dim": "#746F77",
@@ -214,8 +214,8 @@
     "tool-window-bg-alt": "#23262E",
     "tool-window-border": "#1B1D23",
     "tool-window-border-inline": "#363C49",
-    "main-window-bg": "#1B1D23",
-    "main-window-bg-alt": "#1B1D23",
+    "main-window-bg": "#20232B",
+    "main-window-bg-alt": "#20232B",
     "main-window-border": "#1B1D23",
     "control-bg": "#2B303B",
     "control-bg-disabled": "#23262E",
@@ -713,8 +713,8 @@
       "areaBackground": "#495061D7"
     },
     "EditorTabs": {
-      "underlineArc": 4,
-      "underlineHeight": 4,
+      "underlineArc": 0,
+      "underlineHeight": 1,
       "unselectedAlpha": 1.0,
       "unselectedBlend": 1.0,
       "background": "editor-bg",
@@ -732,6 +732,10 @@
       "verticalTabInsets.compact": "-2,10,-2,10",
       "tabContentActionsRightInsets": "0,4,0,2",
       "underlinedTabForeground": "#00E8C6",
+      "underlinedTabInactiveForeground": "#00E8C680",
+      "regularBackground": "#00E8C600",
+      "regularBorderColor": "#00E8C600",
+      "hoverBorderColor": "#00E8C600",
       "underlineColor": "#00E8C6",
       "inactiveUnderlineColor": "#00E8C680"
     },
@@ -1033,8 +1037,8 @@
       "borderColor": "transparent",
       "topBorderWidth": 0,
       "Widget": {
-        "foreground": "#999999",
-        "hoverForeground": "#EEEEEE",
+        "foreground": "#FFFFFF",
+        "hoverForeground": "#FFFFFF",
         "hoverBackground": "#07D4B5B0",
         "pressedBackground": "#00E8C5CC"
       },
@@ -1137,15 +1141,14 @@
         "borderColor": "tool-window-border",
         "inactiveBackground": "andromeda-bg",
         "font.size.offset": 0,
-        "background": "andromeda-bg",
-        "foreground": "#00E8C6"
+        "background": "andromeda-bg"
       },
       "HeaderTab": {
         "hoverInactiveBackground": "tab-bg-hovered",
         "underlineColor": "#00E8C6",
         "inactiveUnderlineColor": "#00E8C680",
-        "selectedForeground": "#00E8C6",
-        "selectedInactiveForeground": "#00E8C6"
+        "underlinedTabForeground": "#00E8C6",
+        "underlinedTabInactiveForeground": "#00E8C6"
       },
       "Button": {
         "foreground": "#BAAFC099",
@@ -1215,7 +1218,10 @@
       "border.compact": "2,8,2,8",
       "hash": "tree-indent-guide-border",
       "hoverBackground": "selection-bg-hovered",
-      "hoverInactiveBackground": "selection-bg-hovered"
+      "hoverInactiveBackground": "selection-bg-hovered",
+      "foreground": "#999999",
+      "selectionForeground": "#00E8C6",
+      "selectionInactiveForeground": "#00E8C6"
     },
     "TrialWidget": {
       "Default": {
