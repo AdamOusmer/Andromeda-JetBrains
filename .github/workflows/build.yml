@@ -46,7 +46,7 @@ jobs:
         continue-on-error: true
 
       - name: Upload plugin zip
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: andromeda-jetbrains
           path: build/distributions/*.zip
