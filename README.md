@@ -1,5 +1,5 @@
 <!-- Copyright (c) 2026 Adam Ousmer. MIT License. See LICENSE.md.
-     Forked from EliverLara/Andromeda (VS Code theme, kept in themes/); the JetBrains port lives at the repo root. -->
+     Started from EliverLara/Andromeda; the original VS Code theme JSON is kept in themes/ as the palette source of truth. -->
 [forks-shield]: https://img.shields.io/github/forks/AdamOusmer/Andromeda-JetBrains.svg?style=for-the-badge
 
 [forks-url]: https://github.com/AdamOusmer/Andromeda-JetBrains/network/members

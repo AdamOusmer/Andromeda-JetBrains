@@ -1,120 +1,14 @@
-# Change Log
+# Changelog
 
-## [1.10.0] - 2026-01-09
+All notable changes to Andromeda JetBrains are documented here. The VS Code theme this port follows is
+[EliverLara/Andromeda](https://github.com/EliverLara/Andromeda); the palette version it matches is noted per release.
 
-- Improve CMake syntax highlighting
+## 1.0.0 - 2026-09-08
 
-## [1.9.0] - 2025-08-24
+Matches Andromeda VS Code 1.10.0.
 
-- Add js rules when using semantic highlighting
-- Fix typo
-- Added support badges
-
-## [1.8.2] - 2024-03-12
-
-- Improve current tab highlightning
-
-## [1.8.1] - 2023-04-13
-
-- Improve minimap visiblility
-
-## [1.8.0] - 2023-03-15
-
-- Improve search matches appearance to improve comments readability
-- Improve comments color
-- Add sponsor link to vscode marketplace
-- Improve readme
-
-## [1.7.2] - 2023-01-24
-
-- Improve contrast in side bar colors
-
-## [1.7.1] - 2022-05-16
-
-- Improve selection background color 
-
-## [1.7.0] - 2020-04-16
-
-- Add highlight to active indent guide
-- Update badges url
-
-## [1.6.1] - 2020-01-27
-
-- Improve badges legibility
-
-## [1.6.0] - 2019-09-19
-
-- Add matching colors to integrated terminal
-
-## [1.5.0] - 2019-08-21
-
-- Update focus border color
-- Update list colors
-
-## [1.4.2] - 2019-05-01
-
-- Refactoring theme
-
-## [1.4.1] - 2019-04-15
-
-- Update indent guide color
-
-## [1.4.0] - 2019-03-04
-
-- Tweaks in js syntax highlighting
-
-## [1.3.1] - 2019-02-27
-
-- Update active tab background color in bordered version
-- Update downloads badge
-
-## [1.3.0] - 2019-01-14
-
-- Add bordered version
-
-## [1.2.5] - 2019-01-06
-
-- Darken border color of some widgets
-- Update scrollbar color
-
-
-## [1.2.4] - 2018-12-26
-
-- Improve README.md
-
-## [1.2.3] - 2018-12-19
-
-### Patch
-
-- Fix invisible comments in git diff view.
-
-## [1.2.2] - 2018-11-20
-
-### Patch
-
-- Fix debug toolbar background color.
-
-## [1.2.1] - 2018-11-14
-
-- Update screenshot
-
-## [1.2.0] - 2018-09-16
-
-### Minor
-
-- Added variant with colorizer only
-
-## [1.1.1] - 2018-01-27
-
-### Patch
-
-- Fixed git diff highlighting
-
-## [1.1.0] - 2018-01-09
-
-### Minor
-
-- Added variant with italic keywords
-
-## [1.0.0] - 2018-01-07
-- Initial release
+- Four UI themes for the IntelliJ Islands layout: Andromeda, Italic, Bordered, Italic Bordered
+- Editor colour schemes with verified attribute keys for JS/TS, Java, Kotlin, Go, Python, CSS/SCSS/LESS, HTML/XML,
+  Markdown, YAML, JSON, TOML, Bash, SQL, PHP, Ruby, Rust, TextMate bundles, console and the new terminal
+- JavaScript and Java annotators for TextMate-scope parity (objects orange, calls yellow, language constants red, `this` pink)
+- Silver brackets `#BFC3CC`; Menlo 15 with 1.5 line spacing by default
